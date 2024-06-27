@@ -25,7 +25,7 @@ class ResultScreen extends StatelessWidget {
                   child: const Text('summary')),
             ],
           ),
-          actions: [],
+          actions: const [],
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
@@ -51,13 +51,23 @@ class ResultScreen extends StatelessWidget {
                 title: 'Total Grade Point',
                 result: '387',
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Container(
                 height: 200,
                 width: 500,
                 decoration: BoxDecoration(
                     color: AppColors.primaryGreen,
                     borderRadius: BorderRadius.circular(12)),
+                child: const Column(
+                  children: [
+                    Text('Your GPA is'),
+                    Divider(
+                      color: Colors.grey,
+                    ),
+                    Text('4.73'),
+                    Text('You are a first class champ 😃'),
+                  ],
+                ),
               )
             ],
           ),
